@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+    hockey-guesser-app:
+        container_name: hockey-guesser-app
+        image: latest123/hockey-guesser-app
+        restart: always
+        build: .
+        ports:
+          - "7500:7500"
+        links:
+          - mongo
+    mongo:
+        container_name: mongo
+        image: mongo
+        volumes:
+          - ./data:/data/db
+        ports:
+          - '27018:27017'
+    
