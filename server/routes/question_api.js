@@ -3,11 +3,12 @@ const router = express.Router();
 const Player = require('../models/player');
 
 router.get('/players', (req, res, next) => {
-  console.log("hit")
-  Player
-    .find({}, 'name')
-    .then((data) => res.json(data))
-    .catch(next);
+  // console.log("hit")
+  // Player
+  //   .find({}, 'name')
+  //   .then((data) => res.json(data))
+  //   .catch(next);
+  res.send('hit');
 });
 
 router.post('/players', (req, res, next) => {
