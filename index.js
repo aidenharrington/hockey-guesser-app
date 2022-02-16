@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const db_config = require('./server/db_config');
-const routes = require('./server/routes/question_api');
+const routes = require('./server/routes/players');
 require('dotenv').config();
 
 const app = express();
